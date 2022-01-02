@@ -1,0 +1,330 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+/* generic styles for the page */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+}
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+a {
+    color: var(--magenta);
+}
+
+a:hover {
+    color: var(--hotmag);
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+/* Navbar */
+
+nav {
+    font-family: var(--mono);
+    padding: 1rem;
+}
+
+nav span a {
+    font-family: var(--sans);
+    font-size: 120%;
+}
+
+nav ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    font-size: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a{
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+}
+
+nav a:hover{
+    color: var(--magenta);
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav li:first-child [class*="fa-"] {
+    font-size: 100%;
+    color: var(--aqua);
+}
+
+nav li:first-child [class*="fa-"]:hover {
+    color: var(--magenta);
+}
+
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--aqua);
+}
+
+
+
+nav [class*="fa-"]:hover {
+    color: var(--magenta);
+}
+
+.button{
+    background-color: var(--magenta);
+    padding:0.5rem 1rem;
+    border-radius: 10px;
+}
+
+.button:hover{
+    background-color: var(--hotmag);
+    color:var(--white);
+}
+
+/* intro styles */
+#intro {
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.intro {
+    font-family: var(--mono);
+    font-size: 1rem;
+}
+
+.name{
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--aqua);
+    display: block;
+    font-weight: 300;
+}
+
+#intro h1 {
+    font-size: 4rem;
+}
+/* Portfolio */
+
+#portfolio {
+    background-color: var(--dkblue);
+    padding: 4rem 1rem;
+}
+
+#portfolio h2{
+    margin-bottom: calc(2.5rem *1.5);
+}
+
+#portfolio h3{
+    color: var(--aqua);
+}
+
+#portfolio h4{
+    font-family: var(--mono);
+    font-size: 1rem;
+    margin:0;
+}
+
+#portfolio p {
+    background-color: var(--black);
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+#portfolio ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    font-size: 1rem;
+}
+
+#portfolio img {
+    border-radius: 10px;
+    border-top: solid 1px var(--aqua);
+    border-left: solid 1px var(--aqua);
+    padding: 1rem;
+    margin: 2rem 0 4rem 0;
+}
+
+
+/* Contact Me */
+
+#contact-me {
+    background-color: var(--plum);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+#contact-me h3 {
+    font-family: var(--sans);
+    font-size: 1.3rem;
+}
+
+#contact-me p {
+    font-family: var(--mono);
+    font-size: 1rem;
+    padding:0px 35%;
+}
+
+#contact-me a {
+    font-size: 0.8rem;
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--mono);
+}
+
+
+/* FOOTER */
+
+#footer {
+    padding: 4rem;
+}
+
+#footer h3 {
+    text-align: center;
+    font-size: 80%;
+    padding-bottom: 1rem;
+}
+
+#footer ul {
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    font-size: 140%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#footer li {
+    color: var(--magenta);
+}
+
+#footer li a:hover {
+    color: var(--white);
+}
+
+#footer p{
+    text-align: center;
+    font-size: 60%;
+}
+
+/* Section Divider */
+
+.section-divider{
+    background: linear-gradient(90deg, rgba(255,23,228,1) 0%, rgba(0,212,255,1) 100%);
+    height: 2px;
+    width: 100vw;
+}
+
+/* MEDIA QUERYS */
+
+@media (min-width:550px) {
+
+    #portfolio h2{
+        max-width: 1200px;
+        margin: 0 auto 3rem auto;
+    }
+
+    #portfolio article {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 2rem;
+    }
+    #portfolio img{
+        grid-column: 1/7;
+        grid-row: 1/2;
+    }
+    .project-content{
+        grid-column: 6/13;
+        grid-row: 1/2;
+        order:2;
+        text-align: right;
+    }
+    
+    #portfolio ul{
+        justify-content: flex-end;
+    }
+    #portfolio .reverse img{
+        grid-column: 6/13;
+        grid-row: 1/2;
+    }
+    .reverse .project-content{
+        grid-column: 1/7;
+        grid-row: 1/2;
+        order:1;
+        text-align: left;
+    }
+    
+    #portfolio .reverse ul{
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width:850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right:auto;
+    }
+    
+}
